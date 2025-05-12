@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
+import LinkedinIcon from '../components/Icons/Linkedin.astro';
+import SocialPill from '../components/Socialpill.astro';
 ---
 
 <Layout>
@@ -21,12 +23,18 @@ import Badge from '../components/Badge.astro';
 				</a>
 			</h1>
 
-			<h2 class="text-xl opacity-80">
-				+15 años de experiencia. Desarrollador web y de contenido. De Alicante, España 🏟️.
+			<h2 class="text-2xl opacity-80 text-wrap">
+				<span>+15 años de experiencia.</span><span class="text-yellow-200/90"> Desarrollador web y de contenido.</span> 
+				<span class="text-red-200/90"> De Alicante, España 🏟️.</span>
+				<span class="opacity-75"> Especialista en crear aplicaciones únicas.</span>
 			</h2>
 
 			<ul>
 				<li>
+					<SocialPill>
+						<LinkedinIcon class="w-6 h-6"/>
+						LinkedIN
+					</SocialPill>	
 				</li>
 			</ul>
 		</section>
