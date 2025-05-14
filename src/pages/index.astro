@@ -2,12 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
 import LinkedinIcon from '../components/Icons/Linkedin.astro';
+import GithubIcon from '../components/Icons/Github.astro';
+import MailIcon from '../components/Icons/Mail.astro';
 import SocialPill from '../components/SocialPill.astro';
+import Experience from '../components/Experience.astro';
+import Container from '../components/Container.astro';
+import Maletin from '../components/Icons/Maletin.astro';
 ---
 
-<Layout>
+
+
+<Layout 
+	title="Portfolio de Santos Bernabeu - Desarrollador y programador web"
+	decription="Contrata a Santos Bernabeu, un desarrollador web con más de 15 años de experiencia en la creación de aplicaciones únicas y contenido digital. Con una sólida formación en programación y un enfoque en la innovación, Santos está listo para llevar tu proyecto al siguiente nivel."
+>
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
+		<Container class="py-44 pb-22">
 			<img 
 				class= "rounded-full w-12 h-12 mb-4" 
 				src="/public/Santos_perfil.jpg"
@@ -29,14 +39,27 @@ import SocialPill from '../components/SocialPill.astro';
 				<span class="opacity-75"> Especialista en crear aplicaciones únicas.</span>
 			</h2>
 
-			<ul>
-				<li>
-					<SocialPill>
-						<LinkedinIcon class="w-6 h-6"/>
-						LinkedIN
-					</SocialPill>	
-				</li>
-			</ul>
-		</section>
+			<nav class="flex gap-x-4 mt-8">
+				<SocialPill href="https://www.linkedin.com/in/santos-bernabeu-marroqu%C3%AD-aab13317a/">
+					<LinkedinIcon class="size-6"/>
+					LinkedIN
+				</SocialPill>
+				<SocialPill href="https://github.com/coyoteMMK">
+					<GithubIcon class="size-6"/>
+					Github
+				</SocialPill>
+				<SocialPill href="santosbaden@gmail.com">
+					<MailIcon class="size-6"/>
+					santosbaden@gmail.com
+				</SocialPill>	
+			</nav>
+		</Container>
+
+		<Container id="experiencia">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Maletin class="size-7"/>
+				Experiencia laboral</h2>
+			<Experience />
+		</Container>
 	</main>
 </Layout>
