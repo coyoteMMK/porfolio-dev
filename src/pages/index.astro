@@ -6,24 +6,26 @@ import GithubIcon from '../components/Icons/Github.astro';
 import MailIcon from '../components/Icons/Mail.astro';
 import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
-import Container from '../components/Container.astro';
-import Maletin from '../components/Icons/Maletin.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import MaletinIcon from '../components/Icons/Maletin.astro';
+import CodeIcon from '../components/Icons/Code.astro';
+import Proyects from '../components/Proyects.astro';
 ---
 
 
 
 <Layout 
 	title="Portfolio de Santos Bernabeu - Desarrollador y programador web"
-	decription="Contrata a Santos Bernabeu, un desarrollador web con más de 15 años de experiencia en la creación de aplicaciones únicas y contenido digital. Con una sólida formación en programación y un enfoque en la innovación, Santos está listo para llevar tu proyecto al siguiente nivel."
+	description="Contrata a Santos Bernabeu, un desarrollador web con más de 15 años de experiencia en la creación de aplicaciones únicas y contenido digital. Con una sólida formación en programación y un enfoque en la innovación, Santos está listo para llevar tu proyecto al siguiente nivel."
 >
-	<main>
-		<Container class="py-44 pb-22">
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32">
 			<img 
 				class= "rounded-full w-12 h-12 mb-4" 
-				src="/public/Santos_perfil.jpg"
+				src="/public/Santos_perfil.webp"
 				alt="Santos photo"
 			/>
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
 				Hey, soy Santos <a
 					href="https://www.linkedin.com/in/santos-bernabeu-marroqu%C3%AD-aab13317a/"
 					target="_blank"
@@ -33,33 +35,40 @@ import Maletin from '../components/Icons/Maletin.astro';
 				</a>
 			</h1>
 
-			<h2 class="text-2xl opacity-80 text-wrap">
+			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
 				<span>+15 años de experiencia.</span><span class="text-yellow-200/90"> Desarrollador web y de contenido.</span> 
 				<span class="text-red-200/90"> De Alicante, España 🏟️.</span>
 				<span class="opacity-75"> Especialista en crear aplicaciones únicas.</span>
 			</h2>
 
-			<nav class="flex gap-x-4 mt-8">
+			<nav class="flex gap-4 mt-8 flex-wrap">
 				<SocialPill href="https://www.linkedin.com/in/santos-bernabeu-marroqu%C3%AD-aab13317a/">
-					<LinkedinIcon class="size-6"/>
+					<LinkedinIcon class="size:4 md:size-6"/>
 					LinkedIN
 				</SocialPill>
 				<SocialPill href="https://github.com/coyoteMMK">
-					<GithubIcon class="size-6"/>
+					<GithubIcon class="size:4 md:size-6"/>
 					Github
 				</SocialPill>
-				<SocialPill href="santosbaden@gmail.com">
-					<MailIcon class="size-6"/>
+				<SocialPill href="mailto:santosbaden@gmail.com">
+					<MailIcon class="size:4 md:size-6"/>
 					santosbaden@gmail.com
 				</SocialPill>	
 			</nav>
-		</Container>
+		</SectionContainer>
 
-		<Container id="experiencia">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-				<Maletin class="size-7"/>
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<MaletinIcon class="size-7"/>
 				Experiencia laboral</h2>
 			<Experience />
-		</Container>
+		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size-7"/>
+				Proyectos</h2>
+			<Proyects />
+		</SectionContainer>
 	</main>
 </Layout>
